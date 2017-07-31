@@ -59,8 +59,10 @@ class XfdfController extends FOSRestController
      */
     public function getDataAction($form, $data){
 
+        // Change the path to your jar file location
         $jarfile = "/home/sherbieny/Documents/Work/Tecla/MCPDF/mcpdf.jar";
 
+        // Change the path to your prefered destination where the output file will be created
         $result = "/home/sherbieny/Documents/Work/Tecla/MCPDF/output.pdf";
 
         $command = "java -jar $jarfile $form fill_form - output - < $data > $result";
