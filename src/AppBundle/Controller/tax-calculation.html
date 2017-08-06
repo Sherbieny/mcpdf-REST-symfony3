@@ -1,0 +1,582 @@
+<style>
+body {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+h1 {
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	font-weight: bold;
+	text-align: center;
+	padding: 15px 0 10px;
+	margin: 0;
+}
+
+h1 {
+	font-size:26px;
+	padding:0;
+}
+
+h1 span {
+	font-size:20px;
+}
+
+table {
+	border-collapse:collapse; 
+	width: 100%;
+}
+
+table.tableTaxCalculation {
+	border-collapse:collapse; 
+	width: 100%;
+	border: 2px solid #000000;
+}
+
+table.tableTaxCalculation td {
+	font-size: 9px;
+	padding: 1px 5px;
+	text-align: center;
+}
+
+table.tableTaxCalculation td.td1 {
+	width: 40px;
+	text-align: center;
+	border-right: 1px solid #000000;
+}
+
+thead.tableTaxCalculation th {
+	font-size: 12px;
+}
+
+
+table.tableTaxCalculation td.left, td.left {
+	text-align: left;
+}
+
+td.center {
+	text-align: center;
+}
+
+td.right {
+	text-align: right;
+}
+
+
+.b1r {
+	border-right: 1px solid #000000;
+}
+
+.b1t {
+	border-top: 1px solid #000000;
+}
+
+.b1b {
+	border-bottom: 1px solid #000000;
+}
+
+.b2t {
+	border-top: 2px solid #000000;
+}
+
+table.header td {
+	font-size: 13px;
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+table.header td.space {
+	width:100%;
+}
+
+table.footer td {
+	font-size: 10px;
+	vertical-align: top;
+	padding-left: 50px;
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+}
+
+.calculationBy{
+	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	font-size:11px;
+	font-style:italic;
+	text-align:right;
+}
+
+hr {
+	padding:0;
+	margin-top:5px;
+	color: #000000;
+}
+</style>
+
+<!--mpdf
+<htmlpageheader name="pageHeadersss">
+        <table cellpadding="0" cellspacing="0" width="100%" class="header">
+		<tr>
+			<td class="center"><img src="https://dev.tecla.no/system/themes/default/images/logoPdf.jpg" width="175" /><br />www.taxinnorway.eu</td>
+			<td class="space"></td>
+		</tr>
+        </table>
+        <hr />
+</htmlpageheader>
+<htmlpagefooter name="pageFooter">
+        		<p class="calculationBy">Tax Calculation is done by Sýkorjak, Matúš, 01.08.2017</p>
+                <hr />
+        <table cellpadding="0" cellspacing="0" width="100%" class="footer">
+		<tr>
+			<td>Tecla Consulting Group oü<br />Väike-Ameerika 8-416<br />101 29 Tallinn<br />Estonia</td>
+			<td>Phone: 0047 21 38 44 66<br />E-mail: info@tecla.no</td>
+			<td>Nordea Bank<br />Bank account: 6021 07 31000<br />IBAN: N08060210731000<br />SWIFT: NDEANOKK<br />Firma reg.: 11181789 </td>
+		</tr>
+        </table>
+</htmlpagefooter>
+mpdf-->
+
+<!--mpdf
+<sethtmlpageheader name="pageHeadersss" value="on" show-this-page="1" />
+<sethtmlpagefooter name="pageFooter" value="on" />
+mpdf-->
+
+<h1>Nilsen, Ole, <span>fødsels. nr.: 662233 44551</span></h1>
+<table cellpadding="0" cellspacing="0" width="100%" class="tableTaxCalculation">
+	<thead>
+		<tr>
+			<th>Post</th>
+			<th colspan="8">Skatteberegning for året 2016</th>
+			<th>Sum</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td class="b2t td1"><strong>2.1.1.</strong></td>
+			<td class="b2t b1r left" colspan="7">Lønn</td>
+			<td class="b2t b1r">250 000</td>
+			<td class="b2t"><strong>250 000</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.2.1</strong></td>
+			<td class="b2t b1r left"><strong>Minstefradrag av egen inntekt</strong> (maks 91 450)</td>
+			<td class="b2t b1r">43%</td>
+			<td class="b2t b1r" colspan="2">91 450</td>
+			<td class="b2t b1r" colspan="3">12/12</td>
+			<td class="b2t b1r"><strong>91 450</strong></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1t b1r"></td>
+			<td class="b1t b1r left"><strong>Mellomsum</strong></td>
+			<td class="b1t b1r" colspan="6"></td>
+			<td class="b1t b1r"></td>
+			<td class="b1t"><strong>158 550</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.2.7</strong></td>
+			<td class="b2t b1r left" colspan="4"><strong>Losji - Husleie</strong></td>
+			<td class="b2t b1r"><strong>mnd</strong></td>
+			<td class="b2t b1r"><strong>husleie</strong></td>
+			<td class="b2t b1r"><strong>totalt</strong></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t"></td>
+		</tr>
+						<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="4">Total</td>
+			<td class="b1t b1r">0</td>
+			<td class="b1t b1r"></td>
+			<td class="b1t b1r">0</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1t b1r left" colspan="4">Elektrisitet / oppvarming, diverse</td>
+			<td class="b1t b1r">0</td>
+			<td class="b1t b1r">0</td>
+			<td class="b1t b1r">0</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1t b1r left" colspan="4"><strong>Mellomsum</strong></td>
+			<td class="b1t b1r"></td>
+			<td class="b1t b1r"></td>
+			<td class="b1t b1r"><strong>0</strong></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1t b1r left" colspan="4"><strong>Kostfradrag: </strong></td>
+			<td class="b1t b1r"><strong>antall</strong></td>
+			<td class="b1t b1r"><strong>losji pr</strong></td>
+			<td class="b1t b1r"></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="4">Antall dager i Norge for å jobbe - se vedlegg som viser</td>
+			<td class="b1r"><strong>dager</strong></td>
+			<td class="b1r"><strong>dag</strong></td>
+			<td class="b1r"></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="4">beregnet antall dager i Norge som følger vedlagt</td>
+			<td class="b1t b1r">4</td>
+			<td class="b1t b1r">200</td>
+			<td class="b1r"><strong>800</strong></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"><strong>3.2.7</strong></td>
+			<td class="left" colspan="4"><strong>Merkostnader ved arbeidsopphold utenfor hjemmet - kost + losji</strong></td>
+			<td class="b1t b1r" colspan="2"></td>
+			<td class="b1t b1r"></td>
+			<td class="b1t b1r"><strong>800</strong></td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.2.8</strong></td>
+			<td class="b2t b1r" colspan="3"></td>
+			<td class="b2t b1r"><strong>dager</strong></td>
+			<td class="b2t b1r"><strong>km t/r</strong></td>
+			<td class="b2t b1r"><strong>kr</strong></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t b1r"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1t b1r left" colspan="3">Daglig reise fra bosted til arbeid, antall dager / reiser</td>
+			<td class="b1t b1r">4</td>
+			<td class="b1t b1r"> </td>
+			<td class="b1t b1r">1.50</td>
+			<td class="b1r">0</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.2.9</strong></td>
+			<td class="b2t b1r left" colspan="2"><strong>Besøk i hjemmet / besøksreiser</strong></td>
+			<td class="b2t b1r"><strong>antall</strong></td>
+			<td class="b2t b1r"><strong>antall km</strong></td>
+			<td class="b2t b1r"><strong>antall km</strong></td>
+			<td class="b2t b1r"><strong>sats</strong></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r" colspan="2"></td>
+			<td class="b1r"><strong>reiser</strong></td>
+			<td class="b1r"><strong>en vei</strong></td>
+			<td class="b1r"><strong>tur / retur</strong></td>
+			<td class="b1r"><strong>pr km</strong></td>
+			<td class="b1r"></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1t b1r left" colspan="2">Antall km for besøk i hjemmet</td>
+			<td class="b1t b1r">2</td>
+			<td class="b1t b1r"> 0</td>
+			<td class="b1t b1r"> 0</td>
+			<td class="b1t b1r">1.50</td>
+			<td class="b1t b1r">0</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="2"><strong>Mellomsum</strong></td>
+			<td class="b1t" colspan="2">Pris pr hjemreise</td>
+			<td class="b1t">0</td>
+			<td class="b1t b1r"></td>
+			<td class="b1t b1r"><strong>0</strong></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="2">Minus bunnfradrag</td>
+			<td class="b1t b1r" colspan="4">Bunnfradrag</td>
+			<td class="b1t b1r">-22 000</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="2"><strong>Beløp til fradrag</strong></td>
+			<td class="b1t b1r" colspan="4"><strong>Sum reisefradrag. Overføres til post 3.2.8/3.2.9</strong></td>
+			<td class="b1t b1r"><strong>0</strong></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r" colspan="2"></td>
+			<td class="b1t b1r" colspan="2"><strong>Arbeidsdager</strong></td>
+			<td class="b1t b1r" colspan="2"><strong>Kostnad per tur</strong></td>
+			<td class="b1t b1r"></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="2">Kostnad til bomring for daglig kjøring til/fra jobb</td>
+			<td class="b1t b1r b1b" colspan="2">4</td>
+			<td class="b1t b1r b1b" colspan="2">0</td>
+			<td class="b1t b1r">0</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+						<td class="b1r left" colspan="6">Bomring, ferge og flybilletter for besøksreiser i hjemmet – se vedlagte dokumenter</td>
+						<td class="b1t b1r">0</td>
+			<td class="b1r"></td>
+		<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"><strong>3.2.9</strong></td>
+			<td class="b1r left" colspan="6"><strong>Mellomsum</strong> - Har du utgifter på totalt over 3 300,- kan du trekke fra hele beløpet</td>
+			<td class="b1t b1r"><strong>0</strong></td>
+			<td class="b1r"><strong>0</strong></td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.2.10</strong></td>
+			<td class="b2t b1r left" colspan="7"><strong>Foreldrefradrag</strong> (maks 25 000)</td>
+			<td class="b2t b1r"><strong>0</strong></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="7"><strong>Mellomsum - kontrollsum</strong></td>
+			<td class="b1r"></td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.2.11</strong></td>
+			<td class="b2t b1r left" colspan="7"><strong>Fagforeningskontigent</strong> (maks 3 850)</td>
+			<td class="b2t b1r"><strong>0</strong></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="7"><strong>Mellomsum - kontrollsum</strong></td>
+			<td class="b1r"></td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.3.1</strong></td>
+			<td class="b2t b1r left" colspan="2"><strong>Renter</strong></td>
+			<td class="b2t b1r" colspan="2"><strong>i Norge</strong></td>
+			<td class="b2t b1r" colspan="2"><strong>i utlandet</strong></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="2">Renter av lån i Norge og utlandet</td>
+			<td class="b1t b1r b1b" colspan="2">0</td>
+			<td class="b1t b1r" colspan="2">0</td>
+			<td class="b1r"></td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="4"><strong>Mellomsum (se kopier av bekreftelse fra banken vedlagt)</strong></td>
+			<td class="b1t b1r" colspan="2"></td>
+			<td class="b1r">0</td>
+			<td class="b1r"><strong>0</strong></td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.3.3</strong></td>
+			<td class="b2t b1r left" colspan="7"><strong>Underholdsbidrag</strong></td>
+			<td class="b2t b1r"><strong>0</strong></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="7"><strong>Mellomsum - kontrollsum</strong></td>
+			<td class="b1r"></td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+		       	<td class="b2t b1r"><strong>x.x.x</strong></td>
+			<td class="b2t b1r left" colspan="7"><strong>Andre kostnader</strong></td>
+			<td class="b2t b1r"><strong>0</strong></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="7"><strong>Mellomsum - kontrollsum</strong></td>
+			<td class="b1r"></td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.3.7</strong></td>
+			<td class="b2t b1r left">Standardfradrag (maks 40 000)</td>
+			<td class="b2t b1r">10%</td>
+			<td class="b2t b1r" colspan="5"></td>
+			<td class="b2t b1r"><strong>0</strong></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1t b1r left" colspan="7"><strong>Mellomsum</strong></td>
+			<td class="b1r"></td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r">&nbsp;</td>
+			<td class="b2t b1r" colspan="8">&nbsp;</td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"><strong>3.4</strong></td>
+			<td class="left" colspan="2"><strong>Alminnelig inntekt / netto inntekt</strong></td>
+			<td class="b1r" colspan="6">(Kontrollsum  92 250)</td>
+			<td><strong>157 750</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"><strong>3.4.x.x</strong></td>
+			<td class="b2t b1r left" colspan="7"><strong>Personfradrag / klassefradrag / bunnfradrag</strong></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="7">Klasse 1</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="7"><strong>Mellom sum / netto inntekt / beløp for beregning av skatt</strong></td>
+			<td class="b1r"><strong>51 750</strong></td>
+			<td><strong>106 000</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"></td>
+			<td class="b2t b1r left" colspan="6"><strong>Beregning av skatt</strong></td>
+			<td class="b2t b1r"><strong>Skatt</strong></td>
+			<td class="b2t b1r"></td>
+			<td class="b2t"></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="left" colspan="4">Skatt (beregnes av alminnelig inntekt - personfradrag)</td>
+			<td>25%</td>
+			<td class="b1r"></td>
+			<td class="b1t b1r">26 500</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="left" colspan="4">Trygdeavgift (beregnes av brutto inntekt)</td>
+			<td>8.2%</td>
+			<td class="b1r"></td>
+			<td class="b1t b1r">20 500</td>
+			<td class="b1r"></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1r left" colspan="6"><strong>Mellom sum</strong></td>
+			<td class="b1t b1r">47 000</td>
+			<td class="b1r"><strong>47 000</strong></td>
+			<td><strong>47 000</strong></td>
+		</tr>
+				        <tr>
+            <td class="b2t b1r"></td>
+            <td class="b2t b1r left" colspan="6"><strong>Trinnskatt</strong></td>
+            <td class="b2t b1r"><strong>Skatt</strong></td>
+            <td class="b2t b1r"></td>
+            <td class="b2t"></td>
+        </tr>
+                <tr>
+            <td class="b1r"></td>
+            <td class="left" colspan="4">Trinn 1</td>
+            <td>0,44%</td>
+            <td class="b1r"></td>
+            <td class="b1t b1r">286</td>
+            <td class="b1r"></td>
+            <td></td>
+        </tr>
+                <tr>
+            <td class="b1r"></td>
+            <td class="left" colspan="4">Trinn 2</td>
+            <td>1,70%</td>
+            <td class="b1r"></td>
+            <td class="b1t b1r">427</td>
+            <td class="b1r"></td>
+            <td></td>
+        </tr>
+                <tr>
+            <td class="b1r"></td>
+            <td class="left" colspan="4">Trinn 3</td>
+            <td>10,70%</td>
+            <td class="b1r"></td>
+            <td class="b1t b1r">0</td>
+            <td class="b1r"></td>
+            <td></td>
+        </tr>
+                <tr>
+            <td class="b1r"></td>
+            <td class="left" colspan="4">Trinn 4</td>
+            <td>13,70%</td>
+            <td class="b1r"></td>
+            <td class="b1t b1r">0</td>
+            <td class="b1r"></td>
+            <td></td>
+        </tr>
+                <tr>
+            <td class="b1r"></td>
+            <td class="b1r left" colspan="6"><strong>Mellom sum</strong></td>
+            <td class="b1t b1r">713</td>
+            <td class="b1r"><strong>713</strong></td>
+            <td><strong>47 713</strong></td>
+        </tr>
+        		<tr>
+			<td class="b2t b1r"></td>
+			<td class="b2t left" colspan="8"><strong>Kalkulert skatt å betale 2016</strong></td>
+			<td class="b2t"><strong>47 713</strong></td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="b1t left" colspan="8"><strong>Forskuddstrekk / Betalt skatt i år</strong></td>
+			<td class="b1t"><strong>0</strong></td>
+		</tr>
+        <tr>
+            <td class="b1r"></td>
+            <td class="b1t left" colspan="8"><strong>Skatt betalt i utlandet</strong></td>
+            <td class="b1t"><strong>0</strong></td>
+        </tr>
+		<tr>
+			<td class="b2t b1r">&nbsp;</td>
+			<td class="b2t" colspan="9">&nbsp;</td>
+		</tr>
+		<tr>
+			<td class="b1r"></td>
+			<td class="left" colspan="8"><strong>Restskatt</strong></td>
+			<td><strong>47 713</strong></td>
+		</tr>
+		<tr>
+			<td class="b2t b1r"></td>
+			<td class="b2t left" colspan="8"><strong>Framførbart underskudd</strong></td>
+			<td class="b2t"><strong>0</strong></td>
+		</tr>   
+	</tbody>
+</table>

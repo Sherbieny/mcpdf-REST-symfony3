@@ -14,63 +14,38 @@ use FOS\RestBundle\View\View;
 use FOS\RestBundle\View\ViewHandlerInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
 class XfdfController extends FOSRestController
 {
-    /**
-     * @Route("/convert", name="default_convert")
-     *
-     */
-    public function populateFormAction(){
-
-
-
-        $pdfForm = "/home/sherbieny/Documents/Work/Tecla/MCPDF/sample.pdf";
-
-        $xfdfFile = "/home/sherbieny/Documents/Work/Tecla/MCPDF/sample.xfdf";
-
-        $jarfile = "/home/sherbieny/Documents/Work/Tecla/MCPDF/mcpdf.jar";
-
-        $result = "/home/sherbieny/Documents/Work/Tecla/MCPDF/output.pdf";
-
-        $command = "java -jar $jarfile $pdfForm fill_form - output - < $xfdfFile > $result";
-
-
-        $out = exec($command, $output);
-        //dump($output);
-        dump($out);
-
-
-
-
-
-
-        return $this->render('default/convert.html.twig');
-
-
-    }
 
    /**
-     * @param $form
-     * @param $data
-     * @return string
-     * @Rest\Get("/convert/{form}/{data}")
+     * @Rest\Post("/convert/")
      */
-    public function getDataAction($form, $data){
-
+    public function getDataAction(Request $request){
         // Change the path to your jar file location
         $jarfile = "/home/sherbieny/Documents/Work/Tecla/MCPDF/mcpdf.jar";
 
         // Change the path to your prefered destination where the output file will be created
         $result = "/home/sherbieny/Documents/Work/Tecla/MCPDF/output.pdf";
 
+        $form = $request->get('form');
+        $data = $request->get('data');
+
+        if(is_null($data) || $data == ""){
+            return new View('Data source not found', Response::HTTP_NO_CONTENT);
+        }elseif(is_null($form) || $form == ""){
+            return new View('Form source not found', Response::HTTP_NO_CONTENT);
+        }
+
         $command = "java -jar $jarfile $form fill_form - output - < $data > $result";
 
         $result = exec($command, $output);
 
+        // dump($result);
+        exit;
 
-        return $result;
-    }
+        }
 
 }
