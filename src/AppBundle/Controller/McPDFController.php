@@ -17,11 +17,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class XfdfController extends FOSRestController
+class McPDFController extends FOSRestController
 {
 
    /**
-     * @Rest\Post("/convert/")
+     * @Rest\Post("/mcPDF/")
      */
     public function getDataAction(Request $request){
         // Change the path to your jar file location

@@ -22,7 +22,7 @@ class MpdfController extends FOSRestController
 
 
     /**
-     * @Rest\Post("/pdf/")
+     * @Rest\Post("/mPDF/")
      */
     public function createPDFAction(Request $request){
         $source = $request->get('source');

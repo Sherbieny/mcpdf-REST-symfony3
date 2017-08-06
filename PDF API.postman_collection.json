@@ -1,0 +1,134 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PDF API",
+		"_postman_id": "bb6f43e7-4660-e75e-6b75-4ec3b755b41c",
+		"description": "API for MCPDF and MPDF tools",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MPDF",
+			"description": "API for MPDF",
+			"item": [
+				{
+					"name": "http://localhost:8000/mPDF/",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8000/mPDF/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"mPDF",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "shereef",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "web developer",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "source",
+									"value": "/home/sherbieny/Documents/Work/Tecla/MCPDF/tax-calculation/tax-calculation.html",
+									"description": "The HTML source",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"description": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Creating a PDF from HTML source\n\nMethod: POST\nform-data:\n\t- source: Path to HTML file, or HTML form that the user will fill"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "MCPDF",
+			"description": "API for MCPDF",
+			"item": [
+				{
+					"name": "http://localhost:8000/mcPDF/",
+					"request": {
+						"url": {
+							"raw": "http://localhost:8000/mcPDF/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"mcPDF",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "shereef",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "web developer",
+									"equals": true,
+									"description": "",
+									"disabled": true
+								}
+							],
+							"variable": []
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "form",
+									"value": "/home/sherbieny/Documents/Work/Tecla/MCPDF/sample.pdf",
+									"description": "The PDF empty form",
+									"type": "text"
+								},
+								{
+									"key": "data",
+									"value": "/home/sherbieny/Documents/Work/Tecla/MCPDF/sample.xfdf",
+									"description": "The XFDF data",
+									"type": "text"
+								}
+							]
+						},
+						"description": "Creating PDF from XFDF data file and filling PDF empty form\n\nMethod: POST\nform-data: \n\t- form = path to PDF empty form file\n\t- data = path to XFDF file"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
